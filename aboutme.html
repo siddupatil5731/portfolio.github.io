@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Siddagouda Basagouda Patil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styling with Dynamic Gradient Animation */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, blue, pink, violet, red, white);
+            background-size: 400% 400%;
+            color: #333;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        /* Keyframes for Gradient Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Flexbox Layout */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.1);
+        }
+
+        .intro {
+            text-align: center;
+            color: #333;
+        }
+
+        .intro h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro p {
+            color: #f0f0f0;
+            font-size: 1.2rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 15px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        ul, dl {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        li:hover {
+            color: #ff6b6b;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff6b6b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+            color: #ff6b6b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Animation Effects */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* DAA Animation - 3D Effect */
+        .daa-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .daa-node {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+            animation: moveNode 5s ease-in-out infinite;
+        }
+
+        @keyframes moveNode {
+            0% { transform: scale(1) translate(0, 0); }
+            50% { transform: scale(1.5) translate(50px, 50px); }
+            100% { transform: scale(1) translate(0, 0); }
+        }
+
+        /* Portfolio Topic Section */
+        .portfolio-topic dl {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-topic dt {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .portfolio-topic dd {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .top-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .top-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .top-buttons a:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="daa-animation">
+        <div class="daa-node" style="top: 10%; left: 20%;"></div>
+        <div class="daa-node" style="top: 30%; left: 50%;"></div>
+        <div class="daa-node" style="top: 70%; left: 80%;"></div>
+        <div class="daa-node" style="top: 40%; left: 10%;"></div>
+        <div class="daa-node" style="top: 60%; left: 70%;"></div>
+    </div>
+
+    <header
+        
+           <div class="top-buttons">
+            <a href="https://siddupatil5731.github.io/Siddu-s-Portfolio/PROJECT OVERVIEW.html" target="_blank">Project Overview</a>
+           
+        </div>
+      
+        <div class="profile-section">
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, red, orange);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Webpage</h1>
+        <nav>
+            <a href="#about">About</a> | <a href="#projects">Projects</a> | <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>    
+
+        <p>Hello! I'm a college student passionate about coding and web development.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Check out my work on <a href="https://github.com/yourprofile" target="_blank">GitHub</a>.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Your Name | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+            <div class="intro">
+                <h1>Hello, I'm Siddagouda Patil</h1>
+                <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+            </div>
+        </div>
+    </header
+
+    
+    <section>
+        <h2>🛠 Projects</h2>
+        <ul>
+            <li><strong>Project 1</strong>: A Comprehensive Approch To Online Food Dilevary.</li>
+        </ul>
+
+        <h2>🚀 Skills</h2>
+        <ul>
+            <li>C, C++, Python</li>
+            <li>SQL And PL-SQL</li>
+            <li>Data Structures and Algorithms</li>
+        </ul>
+
+        <h2>🌐 Find Me Online</h2>
+        <ul>
+            <li><a href="https://github.com/siddupatil5731" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="https" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+        <h2>Portfolio Topic</h2>
+        <div class="portfolio-topic">
+            <dl>
+                <dt>Course Name</dt>
+                <dd>ALGORITHMIC PROBLEM SOLVING</dd>
+
+                <dt>Course Code</dt>
+                <dd>CSE202</dd>
+
+                <dt>Name</dt>
+                <dd>Siddagouda Basagouda Patil</dd>
+
+                <dt>SRN</dt>
+                <dd>02FE23BCS135</dd>
+
+                <dt>Course Instructor</dt>
+                <dd>Vaishali Parab</dd>
+
+                <dt>University</dt>
+                <dd>KLE Technological University</dd>
+
+                <dt>Portfolio Topic/Domain</dt>
+                <dd>A Comprehensive Approch To Online Food Dilevary</dd>
+            </dl>
+        </div>
+
+        <blockquote>
+            “The only way to do great work is to love what you do.” – Steve Jobs
+        </blockquote>
+    </section>
+
+    <footer>
+        <p>Made with ❤ by <a href="https://github.com/siddupatil5731">Siddu</a></p>
+    </footer>
+</body>
+</html>
